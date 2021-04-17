@@ -18,15 +18,33 @@ public class Main {
 
         // Initialize stalls
         Stal kippenhok = new Stal("Kippenhok");
+        kippenhok.add_kip(kip1);
+        kippenhok.add_kip(kip2);
+        kippenhok.add_kip(kip3);
 
         Stal paardenstal = new Stal("Paardenstal");
+        paardenstal.add_paard(paard1);
+        paardenstal.add_paard(paard2);
+        paardenstal.add_paard(paard3);
 
         Stal koeienstal = new Stal("Koeienstal");
-
+        koeienstal.add_koe(koe1);
+        koeienstal.add_koe(koe2);
+        koeienstal.add_koe(koe3);
 
         // Initialize farm
-        Boerderij boerderij = new Boerderij("Boerderij");
+        Boerderij boerderij = new Boerderij("Boerderij de heuvel");
+        boerderij.add_stal(kippenhok);
+        boerderij.add_stal(paardenstal);
+        boerderij.add_stal(koeienstal);
 
+        System.out.println(boerderij);
+        for (int i = 0; i < boerderij.getStallen().size(); i ++){
+            System.out.println(boerderij.getStallen().get(i).toString() + "\r\n");
+            }
 
+        for (int i = 0; i < koeienstal.getKoeien().size(); i ++){
+            System.out.println(koeienstal.getKoeien());
+        }
+        }
     }
-}
