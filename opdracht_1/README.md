@@ -1,4 +1,4 @@
 # Opdracht 1
 
 ## TODO
-Make `stal` an abstract class.
+Make `Stal` an abstract class.
