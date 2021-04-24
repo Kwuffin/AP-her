@@ -1,3 +1,3 @@
 public interface Dier {
-    void maak_geluid();
+    String maak_geluid();
 }

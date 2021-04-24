@@ -10,8 +10,8 @@ public class Koe implements Dier {
     }
 
     @Override
-    public void maak_geluid() {
-        System.out.println("De koe doet mooooooooooooooooooooooo");
+    public String maak_geluid() {
+        return "De koe doet mooooooooooooooooooooooo";
     }
 }
 

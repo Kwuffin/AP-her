@@ -10,8 +10,8 @@ public class Paard implements Dier {
     }
 
     @Override
-    public void maak_geluid(){
-        System.out.println("Het paard doet BFFFFRRRRTTTT");
+    public String maak_geluid(){
+        return "Het paard doet BFFFFRRRRTTTT";
     }
 
 }

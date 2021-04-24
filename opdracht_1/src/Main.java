@@ -43,10 +43,27 @@ public class Main {
             System.out.println(boerderij.getStallen().get(i).toString() + "\r\n");
             }
 
+        // Print kippenhok
+        System.out.println("Kippen in " + kippenhok.getNaam() + ":");
+        for (int i = 0; i < kippenhok.getKippen().size(); i ++){
+            System.out.println(kippenhok.getKippen().get(i));
+        }
+        System.out.println(kip1.maak_geluid() + "\n");
+
+        // Print paardenstl
+        System.out.println("Paarden in " + paardenstal.getNaam() + ":");
+        for (int i = 0; i < paardenstal.getPaarden().size(); i ++){
+            System.out.println(paardenstal.getPaarden().get(i));
+        }
+        System.out.println(paard1.maak_geluid() + "\n");
+
+        // Print koeienstal
         System.out.println("Koeien in " + koeienstal.getNaam() + ":");
         for (int i = 0; i < koeienstal.getKoeien().size(); i ++){
             System.out.println(koeienstal.getKoeien().get(i));
             }
+        System.out.println(koe1.maak_geluid() + "\n");
+
         }
         
     }

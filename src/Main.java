@@ -42,9 +42,10 @@ public class Main {
         for (int i = 0; i < boerderij.getStallen().size(); i ++){
             System.out.println(boerderij.getStallen().get(i).toString() + "\r\n");
             }
-
+        System.out.println("Koeien in " + koeienstal.getNaam() + ":");
         for (int i = 0; i < koeienstal.getKoeien().size(); i ++){
-            System.out.println(koeienstal.getKoeien());
+            System.out.println(koeienstal.getKoeien().get(i));
+            }
         }
-        }
+        
     }

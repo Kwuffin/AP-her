@@ -10,8 +10,8 @@ public class Kip implements Dier {
     }
 
     @Override
-    public void maak_geluid(){
-        System.out.println("Het kip doet tok tok tok");
+    public String maak_geluid(){
+        return "Het kip doet tok tok tok";
     }
 
 }
