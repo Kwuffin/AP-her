@@ -8,5 +8,7 @@ public class Paardenstal extends Stal{
         super(nm);
     }
 
-
+    public void add_paard(Paard paard){
+        paarden.add(paard);
+    }
 }

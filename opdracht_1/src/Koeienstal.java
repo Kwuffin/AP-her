@@ -8,5 +8,7 @@ public class Koeienstal extends Stal{
         super(nm);
     }
 
-
+    public void add_koe(Koe koe){
+        koeien.add(koe);
+    }
 }

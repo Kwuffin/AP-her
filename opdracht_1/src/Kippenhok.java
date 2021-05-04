@@ -8,5 +8,7 @@ public class Kippenhok extends Stal {
         super(nm);
     }
 
-
+    public void add_kip(Kip kip){
+        kippen.add(kip);
+    }
 }
