@@ -11,4 +11,8 @@ public class Koeienstal extends Stal{
     public void add_koe(Koe koe){
         koeien.add(koe);
     }
+
+    public ArrayList<Koe> getKoeien(){
+        return koeien;
+    }
 }

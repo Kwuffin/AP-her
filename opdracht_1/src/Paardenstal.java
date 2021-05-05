@@ -11,4 +11,8 @@ public class Paardenstal extends Stal{
     public void add_paard(Paard paard){
         paarden.add(paard);
     }
+
+    public ArrayList<Paard> getPaarden(){
+        return paarden;
+    }
 }

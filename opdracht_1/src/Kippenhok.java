@@ -11,4 +11,8 @@ public class Kippenhok extends Stal {
     public void add_kip(Kip kip){
         kippen.add(kip);
     }
+
+    public ArrayList<Kip> getKippen() {
+        return kippen;
+    }
 }

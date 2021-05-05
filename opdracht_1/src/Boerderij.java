@@ -17,7 +17,7 @@ public class Boerderij {
     }
 
 
-    // Getters
+    // Setters and Getters
     public String getNaam() {
         return naam;
     }
