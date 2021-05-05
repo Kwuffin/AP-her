@@ -6,19 +6,31 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Ask user for farm name
+        System.out.println("Hoe heet je boerderij?");
+        String farm_name_user = sc.nextLine();
+
+        // Create farm
+        Boerderij boerderij = new Boerderij(farm_name_user);
+
         // Create stalls
         Kippenhok kippenhok = new Kippenhok("Kippenhok 1");
         Paardenstal paardenstal = new Paardenstal("Paardenstal 1");
         Koeienstal koeienstal = new Koeienstal("Koeienstal 1");
+
+        // Add stalls to farm
+        boerderij.add_stal(kippenhok);
+        boerderij.add_stal(paardenstal);
+        boerderij.add_stal(koeienstal);
 
         while (true) {
 
             // User can create their own animals
             System.out.println("Welk dier wil je maken?\n" +
                     "Keuze uit: 'Kip', 'Paard', 'Koe'");
-
             String animal_input = sc.nextLine(); // Read user input
 
+            // If user chose to create a chicken:
             if (animal_input.equalsIgnoreCase("kip")) {
 
                 // User input for a name
@@ -31,7 +43,7 @@ public class Main {
 
                 // User input for an age
                 System.out.println("Geef je kip een leeftijd:");
-                int leeftijd_input = sc.nextInt();
+                int leeftijd_input = Integer.parseInt(sc.nextLine());
 
                 // If chicken stall is full, don't create animal
                 if (kippenhok.getKippen().size() >= 5){
@@ -58,7 +70,7 @@ public class Main {
 
                 // User input for an age
                 System.out.println("Geef je paard een leeftijd:");
-                int leeftijd_input = sc.nextInt();
+                int leeftijd_input = Integer.parseInt(sc.nextLine());
 
                 // If horsestall is full, don't create animal
                 if (paardenstal.getPaarden().size() >= 5){
@@ -84,7 +96,7 @@ public class Main {
 
                 // User input for an age
                 System.out.println("Geef je koe een leeftijd:");
-                int leeftijd_input = sc.nextInt();
+                int leeftijd_input = Integer.parseInt(sc.nextLine());
 
                 // If cowstall is full, don't create animal
                 if (koeienstal.getKoeien().size() >= 5){
@@ -104,6 +116,7 @@ public class Main {
                 continue;
             }
 
+            System.out.println("\n" + boerderij.toString() + "\n");
 
 //        // Initialize stalls
 //        Stal kippenhok = new Stal("Kippenhok");
