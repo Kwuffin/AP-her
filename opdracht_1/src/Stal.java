@@ -8,10 +8,6 @@ public abstract class Stal {
         this.naam = nm;
     }
 
-    public String toString(){
-        return String.format("Dit is stal: '%s'", naam);
-    }
-
     // Setters and Getters
     public String getNaam() {
         return naam;

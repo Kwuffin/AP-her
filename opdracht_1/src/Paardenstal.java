@@ -12,6 +12,11 @@ public class Paardenstal extends Stal{
         paarden.add(paard);
     }
 
+    public String toString(){
+        return String.format("Dit is %s:\n" +
+                "%s heeft %s paard(en).", getNaam(), getNaam(), paarden.size());
+    }
+
     public ArrayList<Paard> getPaarden(){
         return paarden;
     }

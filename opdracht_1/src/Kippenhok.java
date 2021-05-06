@@ -12,6 +12,11 @@ public class Kippenhok extends Stal {
         kippen.add(kip);
     }
 
+    public String toString(){
+        return String.format("Dit is %s:\n" +
+                "%s heeft %s kip(pen).", getNaam(), getNaam(), kippen.size());
+    }
+
     public ArrayList<Kip> getKippen() {
         return kippen;
     }

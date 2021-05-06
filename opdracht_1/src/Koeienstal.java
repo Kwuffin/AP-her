@@ -12,6 +12,11 @@ public class Koeienstal extends Stal{
         koeien.add(koe);
     }
 
+    public String toString(){
+        return String.format("Dit is %s:\n" +
+                "%s heeft %s koe(ien).", getNaam(), getNaam(), koeien.size());
+    }
+
     public ArrayList<Koe> getKoeien(){
         return koeien;
     }
