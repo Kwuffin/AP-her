@@ -117,55 +117,9 @@ public class Main {
             }
 
             System.out.println("\n" + boerderij.toString() + "\n");
-
-//        // Initialize stalls
-//        Stal kippenhok = new Stal("Kippenhok");
-//        kippenhok.add_kip(kip1);
-//        kippenhok.add_kip(kip2);
-//        kippenhok.add_kip(kip3);
-//
-//        Stal paardenstal = new Stal("Paardenstal");
-//        paardenstal.add_paard(paard1);
-//        paardenstal.add_paard(paard2);
-//        paardenstal.add_paard(paard3);
-//
-//        Stal koeienstal = new Stal("Koeienstal");
-//        koeienstal.add_koe(koe1);
-//        koeienstal.add_koe(koe2);
-//        koeienstal.add_koe(koe3);
-//
-//        // Initialize farm
-//        Boerderij boerderij = new Boerderij("Boerderij de heuvel");
-//        boerderij.add_stal(kippenhok);
-//        boerderij.add_stal(paardenstal);
-//        boerderij.add_stal(koeienstal);
-//
-//        System.out.println(boerderij);
-//        for (int i = 0; i < boerderij.getStallen().size(); i ++){
-//            System.out.println(boerderij.getStallen().get(i).toString() + "\r\n");
-//            }
-//
-//        // Print kippenhok
-//        System.out.println("Kippen in " + kippenhok.getNaam() + ":");
-//        for (int i = 0; i < kippenhok.getKippen().size(); i ++){
-//            System.out.println(kippenhok.getKippen().get(i));
-//        }
-//        System.out.println(kip1.maak_geluid() + "\n");
-//
-//        // Print paardenstl
-//        System.out.println("Paarden in " + paardenstal.getNaam() + ":");
-//        for (int i = 0; i < paardenstal.getPaarden().size(); i ++){
-//            System.out.println(paardenstal.getPaarden().get(i));
-//        }
-//        System.out.println(paard1.maak_geluid() + "\n");
-//
-//        // Print koeienstal
-//        System.out.println("Koeien in " + koeienstal.getNaam() + ":");
-//        for (int i = 0; i < koeienstal.getKoeien().size(); i ++){
-//            System.out.println(koeienstal.getKoeien().get(i));
-//            }
-//        System.out.println(koe1.maak_geluid() + "\n");
-
+            for (int i = 0; i < boerderij.getStallen().size(); i++){
+                System.out.println(boerderij.getStallen().get(i).toString());
+            }
         }
     }
 }
