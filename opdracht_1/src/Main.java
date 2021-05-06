@@ -25,10 +25,9 @@ public class Main {
 
         while (true) {
             System.out.println("""
-                    Menu\r
+                    ==========| Menu |==========\r
                     1. Maak nieuw dier\r
-                    2. Zie overzicht boerderij
-                    """);
+                    2. Zie overzicht boerderij""");
             String user_choice = sc.nextLine();
 
             // User chose to make new animal
@@ -121,17 +120,43 @@ public class Main {
 
                 else {
                     System.out.println("Ongeldige invoer!");
-                    continue;
                 }
             }
 
+        // If user wants to see information about farm
         else if (user_choice.equalsIgnoreCase("2")){
-                System.out.println("\n" + boerderij.toString() + ":\n");
+
+                // Farm toString()
+                System.out.println("\n" + "===============| Informatie |===============\n" +
+                        boerderij.toString() + ":\n");
+
+                // For each stall in the farm:
                 for (int i = 0; i < boerderij.getStallen().size(); i++){
-                    System.out.println(boerderij.getStallen().get(i).toString() + "\n");
+                    System.out.println(boerderij.getStallen().get(i).toString());
+
+                    // If there are any chicken in the stalls
+                    if (kippenhok.getKippen().size() != 0 && i == 0){
+                        for (int j = 0; j < kippenhok.getKippen().size(); j++){
+                            System.out.println(kippenhok.getKippen().get(j).toString());
+                        }
+                    }
+
+                    // If there are any horses in the stalls
+                    else if (paardenstal.getPaarden().size() != 0 && i == 1){
+                        for (int j = 0; j < paardenstal.getPaarden().size(); j++){
+                            System.out.println(paardenstal.getPaarden().get(j).toString());
+                        }
+                    }
+
+                    // If there are any cows in the stalls
+                    else if (koeienstal.getKoeien().size() != 0 && i == 2){
+                        for (int j = 0; j < koeienstal.getKoeien().size(); j++){
+                            System.out.println(koeienstal.getKoeien().get(j).toString());
+                        }
+                    }
+                    System.out.println("");
                 }
             }
-
         }
     }
 }
