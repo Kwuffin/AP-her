@@ -10,7 +10,7 @@ public class Paard implements Dier {
     }
 
     public String toString(){
-        return String.format("Dit is paard '%s':\r" +
+        return String.format("Dit is paard '%s':\n" +
                 "Zijn vacht is %s en is %s jaar oud.", naam, kleur, leeftijd);
     }
 

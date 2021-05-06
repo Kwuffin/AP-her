@@ -10,7 +10,7 @@ public class Koe implements Dier {
     }
 
     public String toString(){
-        return String.format("Dit is koe '%s':\r" +
+        return String.format("Dit is koe '%s':\n" +
                 "Zijn vacht is %s en is %s jaar oud.", naam, kleur, leeftijd);
     }
 
