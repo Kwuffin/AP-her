@@ -9,6 +9,11 @@ public class Kip implements Dier {
         this.leeftijd = lf;
     }
 
+    public String toString(){
+        return String.format("Dit is kip '%s':\r" +
+                "Zijn veren zijn %s en is %s jaar oud.", naam, kleur, leeftijd);
+    }
+
     @Override
     public String maak_geluid(){
         return "Het kip doet tok tok tok";

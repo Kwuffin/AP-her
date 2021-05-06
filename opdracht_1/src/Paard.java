@@ -9,6 +9,11 @@ public class Paard implements Dier {
         this.leeftijd = lf;
     }
 
+    public String toString(){
+        return String.format("Dit is paard '%s':\r" +
+                "Zijn vacht is %s en is %s jaar oud.", naam, kleur, leeftijd);
+    }
+
     @Override
     public String maak_geluid(){
         return "Het paard doet BFFFFRRRRTTTT";
