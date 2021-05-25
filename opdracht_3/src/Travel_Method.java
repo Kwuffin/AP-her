@@ -1,4 +1,4 @@
-public abstract class Travel_Method {
+public class Travel_Method {
     Double multiplier;
     String name;
 
@@ -12,6 +12,6 @@ public abstract class Travel_Method {
     }
 
     public String toString(){
-        return String.format("This is ride '%s'", name);
+        return String.format("This is a %s", name);
     }
 }
