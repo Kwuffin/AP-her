@@ -1,10 +1,10 @@
-public class Rit {
+public abstract class Travel_Method {
     Double multiplier;
     String name;
 
-    public Rit(String name) {
+    public Travel_Method(String name, Double multiplier) {
         this.name = name;
-        this.multiplier = 1.0;
+        this.multiplier = multiplier;
     }
 
     public Double getMultiplier() {
