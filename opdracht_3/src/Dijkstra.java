@@ -1,27 +1,26 @@
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Dijkstra {
     public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
         source.setDistance(0.0);
 
         Set<Node> settledNodes = new HashSet<>();
-        Set<Node> unsettledNodes = new HashSet<>();
+        PriorityQueue<BestNode> unsettledNodes = new PriorityQueue<>();
 
-        unsettledNodes.add(source);
+        unsettledNodes.add(new BestNode(source, source.getDistance()));
 
         while (unsettledNodes.size() != 0) {
-            Node currentNode = getLowestDistanceNode(unsettledNodes);
-            unsettledNodes.remove(currentNode);
-            for (Map.Entry< Node, Double> adjacencyPair:
+            Node currentNode = unsettledNodes.remove().getKey();
+
+            for (Map.Entry<Node, Double> adjacencyPair:
                     currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
-                Double edgeWeight = adjacencyPair.getValue();
+                Stap step = new Stap(adjacencyPair.getValue(), currentNode.getMultiplier(adjacentNode));
+                Double edgeWeight = step.getCost();
+
                 if (!settledNodes.contains(adjacentNode)) {
                     calculateMinimumDistance(adjacentNode, edgeWeight, currentNode);
-                    unsettledNodes.add(adjacentNode);
+                    unsettledNodes.add(new BestNode(adjacentNode, adjacentNode.getDistance()));
                 }
             }
             settledNodes.add(currentNode);
@@ -53,6 +52,4 @@ public class Dijkstra {
             evaluationNode.setShortestPath(shortestPath);
         }
     }
-
-
 }
