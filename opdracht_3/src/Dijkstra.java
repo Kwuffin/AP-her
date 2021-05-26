@@ -46,8 +46,7 @@ public class Dijkstra {
         return lowestDistanceNode;
     }
 
-    private static void calculateMinimumDistance(Node evaluationNode,
-                                                 Double edgeWeigh, Node sourceNode) {
+    private static void calculateMinimumDistance(Node evaluationNode, Double edgeWeigh, Node sourceNode) {
         Double sourceDistance = sourceNode.getDistance();
         if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
             evaluationNode.setDistance(sourceDistance + edgeWeigh);
