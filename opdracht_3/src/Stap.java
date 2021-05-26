@@ -9,7 +9,7 @@ public class Stap {
     }
 
     public String toString() {
-        return "ID: " + step_id;
+        return "Step #" + step_id;
     }
 
 

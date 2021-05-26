@@ -12,7 +12,6 @@ public class Node {
     private List<Node> shortestPath = new LinkedList<>();
     private Double distance = Double.MAX_VALUE;
     Map<Node, Double> adjacentNodes = new HashMap<>();
-
     private Map<Node, Travel_Method> travel_options = new HashMap<>();
 
     public Node(String name) {
@@ -23,16 +22,16 @@ public class Node {
         adjacentNodes.put(destination, distance);
     }
 
-    public Double getMultiplier(Node node) {
-        Travel_Method travel_method = travel_options.get(node);
-        return travel_method.getMultiplier();
-    }
-
     public void add_Travel_Method(Node destination, Travel_Method travel_method){
         travel_options.put(destination, travel_method);
     }
 
     // getters and setters
+    public Double getMultiplier(Node node) {
+        Travel_Method travel_method = travel_options.get(node);
+        return travel_method.getMultiplier();
+    }
+
     public String getName() {
         return name;
     }
@@ -66,7 +65,7 @@ public class Node {
     }
 
     public String toString() {
-        return name;
+        return String.format("This is Node '%s'", name);
     }
 
 }

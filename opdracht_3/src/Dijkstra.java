@@ -16,8 +16,7 @@ public class Dijkstra {
         while (unsettledNodes.size() != 0) {
             Node currentNode = unsettledNodes.remove().getKey();
 
-            for (Map.Entry<Node, Double> adjacencyPair:
-                    currentNode.getAdjacentNodes().entrySet()) {
+            for (Map.Entry<Node, Double> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
                 Stap step = new Stap(adjacencyPair.getValue(), currentNode.getMultiplier(adjacentNode));
                 Double edgeWeight = step.getCost();

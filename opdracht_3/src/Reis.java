@@ -6,12 +6,29 @@ public class Reis extends Graph {
 
     public Reis(Node end_node) {
         this.end_node = end_node;
-
-        List<Stap> steps = new ArrayList<>();
+        List<Stap> step_list = new ArrayList<>();
 
         // List of the shortest path to `end_node`
-        ArrayList<Node> nodes = new ArrayList<Node>(end_node.getShortestPath());
+        ArrayList<Node> nodes = new ArrayList<>(end_node.getShortestPath());
         nodes.add(end_node);  // Add the last node to the list.
+
+        // For each step until the end_node
+        for (int i = 0; i < nodes.size() -1; i++) {
+            Node current_node = nodes.get(i);  // Loop through node in the path
+            Node next_node = nodes.get(i + 1);  // Loop through the next node in the path
+
+            // Map with the adjacent Node and the between the Nodes distance
+            Map<Node, Double> nodeDict = current_node.getAdjacentNodes();
+            Double value = nodeDict.get(next_node);
+
+            Stap step = new Stap(value, current_node.getMultiplier(next_node));
+            step.setStep_id(i);
+            steps.add(step);  // Add the step to the steps
+        }
+    }
+
+    public void addSteps(Stap step) {
+        steps.add(step);
     }
 
     // For each step, define the way to get there
@@ -25,14 +42,12 @@ public class Reis extends Graph {
         Double distance = 0.0;
         if (steps.size() >= 1) {
             for (Stap step : steps) {
-                System.out.printf("Step %s: - Cost: %s%n", step.getStep_id() + 1, step.getCost());
+                System.out.printf("Step %s: - Cost: %s%n%n", step.getStep_id() + 1, step.getCost());
                 distance += step.getCost();
             }
-            return distance;
+
         }
-        else {
-            return null;
-        }
+        return distance;
     }
 
     public String toString() {
@@ -55,9 +70,5 @@ public class Reis extends Graph {
 
     public List<Stap> getSteps() {
         return steps;
-    }
-
-    public void setSteps(List<Stap> steps) {
-        this.steps = steps;
     }
 }
