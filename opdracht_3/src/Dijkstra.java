@@ -1,3 +1,7 @@
+/*
+Code is based on https://www.baeldung.com/java-dijkstra
+ */
+
 import java.util.*;
 
 public class Dijkstra {
