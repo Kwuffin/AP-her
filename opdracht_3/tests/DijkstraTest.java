@@ -57,5 +57,6 @@ class DijkstraTest {
         // TODO: Put the code above in a @BeforeAll. I put it here for now just to get rid of the NullPointerException
 
         assertEquals(100, nodeB.getDistance());
+
     }
 }
