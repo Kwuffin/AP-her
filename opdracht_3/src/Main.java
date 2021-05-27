@@ -1,23 +1,18 @@
 public class Main {
     public static void main(String[] args)
     {
-        Test();
-
-    }
-
-    private static void Test()
-    {
+        // Create travel methods
         Travel_Method ride = new Travel_Method("car ride",1.00);
         Travel_Method train_ride = new Travel_Method("train ride", 1.3);
         Travel_Method flight = new Travel_Method("flight", 3.00);
 
         // Create nodes
-        Node nodeA = new Node("Node A");
-        Node nodeB = new Node("Node B");
-        Node nodeC = new Node("Node C");
-        Node nodeD = new Node("Node D");
-        Node nodeE = new Node("Node E");
-        Node nodeF = new Node("Node F");
+        Node nodeA = new Node("A");
+        Node nodeB = new Node("B");
+        Node nodeC = new Node("C");
+        Node nodeD = new Node("D");
+        Node nodeE = new Node("E");
+        Node nodeF = new Node("F");
 
         // Set node attributes
         nodeA.addDestination(nodeB, 100.0);
