@@ -18,6 +18,10 @@ This flight is about 370 kilometers, 370 / 120 ≈ 3, this is how I came up with
 train rides except I switched ticket price for time. The average speed of a train in the Netherlands is about 130km/h.
 So the multiplier for train rides is 1,3.
 
+### Main
+I start with creating the three different `Travel_Method`s; "car ride", "train ride", and "flight". After this I
+create instances of Node and name them from "A" to "F".
+
 ### My graph:
 ![graph](Node_setup.png "Graph")
 
