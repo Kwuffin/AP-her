@@ -5,22 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DijkstraTest {
-    Node nodeA;
-    Node nodeB;
-    Node nodeC;
-    Node nodeD;
-    Node nodeE;
-    Node nodeF;
-    Travel_Method ride;
-    Travel_Method train_ride;
-    Travel_Method flight;
-    Graph graph;
-    Node start_node;
-    Node end_node;
-    Reis journey;
-
-    @BeforeEach
-    public  void setup() {
+    @Test
+    public void calculateShortestPathFromSource() {
         // Create travel methods
         Travel_Method ride = new Travel_Method("car ride",1.00);
         Travel_Method train_ride = new Travel_Method("train ride", 1.3);
@@ -68,14 +54,8 @@ class DijkstraTest {
         Node start_node = nodeA;
         Node end_node = nodeE;
         graph =  Dijkstra.calculateShortestPathFromSource(graph, start_node);
+        // TODO: Put the code above in a @BeforeAll. I put it here for now just to get rid of the NullPointerException
 
-        Reis journey = new Reis(nodeE);
-        journey.setSteps(journey);
-    }
-
-    @Test
-    public void calculateShortestPathFromSource() {
-        setup();
         assertEquals(100, nodeB.getDistance());
     }
 }
